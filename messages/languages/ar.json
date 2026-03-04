@@ -1,0 +1,33 @@
+{
+  "title": "اللغات",
+  "subtitle": "إتقان اللغات يفتح آفاق التواصل العالمي ويعزز فرص التعاون الاحترافي بين الثقافات",
+  "levels": {
+    "native": "اللغة الأم",
+    "professional": "احترافي",
+    "intermediate": "متوسط"
+  },
+  "sectionCategory":"اللغات",
+  "languages": [
+    {
+      "name": "العربية",
+      "nativeName": "العربية",
+      "level": "native",
+      "flag": "🇮🇶",
+      "backward": "/assets/images/LanguagesFlags/iraq.png"
+    },
+    {
+      "name": "التركية",
+      "nativeName": "Türkçe",
+      "level": "professional",
+      "flag": "🇹🇷",
+      "backward": "/assets/images/LanguagesFlags/turkey.png"
+    },
+    {
+      "name": "الإنجليزية",
+      "nativeName": "English",
+      "level": "intermediate",
+      "flag": "🇺🇸",
+      "backward": "/assets/images/LanguagesFlags/america.png"
+    }
+  ]
+}

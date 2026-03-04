@@ -1,0 +1,35 @@
+{
+    "hero": {
+        "badge": "مقالات وأفكار",
+        "title": "المدونة",
+        "subtitle": "أفكار حول تطوير الويب والتصميم وفن بناء برمجيات رائعة.",
+        "sectionCategory": "جميع المقالات"
+    },
+    "search": {
+        "placeholder": "ابحث عن مقالات ومواضيع وعلامات…",
+        "filterButton": "تصفية",
+        "showingResults": "عرض",
+        "article": "مقالة",
+        "articles": "مقالات"
+    },
+    "categories": {
+        "all": "الكل",
+        "webDevelopment": "تطوير الويب",
+        "programming": "البرمجة",
+        "design": "التصميم",
+        "aiMl": "الذكاء الاصطناعي",
+        "career": "المسيرة المهنية"
+    },
+    "readMore": "اقرأ",
+    "readingTime": "دقيقة قراءة",
+    "backToBlog": "العودة إلى المدونة",
+    "tableOfContents": "المحتويات",
+    "relatedArticles": "مقالات ذات صلة",
+    "shareArticle": "مشاركة",
+    "linkCopied": "تم النسخ!",
+    "noResults": {
+        "title": "لا توجد مقالات",
+        "description": "حاول تعديل بحثك أو مسح الفلاتر.",
+        "clearButton": "مسح الفلاتر"
+    }
+}

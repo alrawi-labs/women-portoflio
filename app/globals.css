@@ -1,0 +1,185 @@
+/* @import "./variables.css"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ===== Academic Portfolio – Soft Romantic Feminine Palette ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+  /* ── Rose & Blush ── */
+  --rose:           #c9748a;       /* Ana aksan — gül */
+  --rose-light:     #e8a0b0;       /* Hover, highlight */
+  --rose-dim:       #9a5268;       /* Koyu gül, border */
+  --rose-pale:      #f5dde4;       /* Çok açık pudra pembe */
+  --rose-ghost:     rgba(201, 116, 138, 0.10);
+
+  /* ── Warm Gold / Bronze ── */
+  --gold:           #c9a96e;       /* Sıcak altın */
+  --gold-light:     #e2c98a;       /* Açık altın */
+  --gold-dim:       #957840;       /* Koyu bronz */
+  --gold-pale:      #f7f0e0;       /* Krem-altın */
+
+  /* ── Cream & Ivory (arka planlar) ── */
+  --ivory:          #fdf6ee;       /* En açık, sayfa bg */
+  --cream:          #f5ece0;       /* Kart bg */
+  --cream-mid:      #e8ddd0;       /* Border, ayırıcı */
+  --cream-dim:      #c4b5a5;       /* Soluk metin */
+
+  /* ── Deep Mauve / Plum (navy'nin yerini alıyor) ── */
+  --plum:           #2d1f2e;       /* En koyu — primary bg */
+  --plum-mid:       #3e2a40;       /* Surface */
+  --plum-surface:   #50364e;       /* Card, panel */
+  --plum-border:    #6b4a68;       /* Border */
+
+  /* ── Neutral warm slate ── */
+  --slate:          #9e8e9a;       /* Placeholder, yardımcı metin */
+  --text-primary:   #2d1f2e;       /* Ana metin (light mode) */
+  --text-secondary: #6b4a68;       /* İkincil metin */
+
+  /* ── Aliases (Tailwind / component uyumu) ── */
+  --bg-primary:          #2d1f2e;
+  --bg-secondary:        #3e2a40;
+  --bg-hover:            #50364e;
+  --text-color:          #f5ece0;
+  --text-color2:         #e8a0b0;
+  --text-hover:          #f5dde4;
+  --border-color:        #c9748a;
+  --border-color-subtle: #6b4a68;
+  --gradient-start:      #3e2a40;
+  --gradient-end:        #c9748a;
+
+  /* ── Navy aliases (eski componentler için fallback) ── */
+  --navy:           #2d1f2e;
+  --navy-mid:       #3e2a40;
+  --navy-surface:   #50364e;
+  --navy-border:    #6b4a68;
+
+  /* ── Gold aliases (eski componentler için fallback) ── */
+  --gold-light:     #e2c98a;
+  --gold-dim:       #957840;
+  --cream:          #f5ece0;
+  --cream-dim:      #c4b5a5;
+  --slate:          #9e8e9a;
+
+  /* ── Typography ── */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Jost', sans-serif;
+
+  /* ── Gradients ── */
+  --gradient-name:   linear-gradient(145deg, #f7f0e0 0%, #e2c98a 35%, #c9a96e 60%, #e8a0b0 85%, #c9748a 100%);
+  --gradient-btn:    linear-gradient(135deg, #e8a0b0 0%, #c9748a 55%, #9a5268 100%);
+  --gradient-gold-h: linear-gradient(90deg, var(--gold), transparent);
+  --gradient-rose-h: linear-gradient(90deg, var(--rose), transparent);
+  --gradient-hero:   radial-gradient(ellipse at 70% 20%, rgba(201,116,138,0.18) 0%, transparent 55%),
+                     radial-gradient(ellipse at 20% 80%, rgba(201,169,110,0.12) 0%, transparent 50%),
+                     #2d1f2e;
+}
+
+/* ===== Base ===== */
+body {
+  font-family: 'Sora', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Subtle graph-paper grid background ===== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(200, 164, 90, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 164, 90, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ===== Typography helpers ===== */
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar        { width: 8px; }
+::-webkit-scrollbar-track  { background: rgba(201,116,138,0.05); }
+::-webkit-scrollbar-thumb  {
+  background: linear-gradient(180deg, var(--rose-light,#e8a0b0), var(--rose,#c9748a));
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, var(--rose-light,#e8a0b0), var(--rose-dim,#9a5268)); }
+* { scrollbar-width: thin; scrollbar-color: var(--rose-light,#e8a0b0) rgba(201,116,138,0.05); }
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes scaleText {
+  0%, 100% { transform: scale(1);    opacity: 0.06; }
+  50%       { transform: scale(1.04); opacity: 0.10; }
+}
+@keyframes ruleDraw {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.animate-fade-in-up          { animation: fadeInUp    0.7s ease-out both; }
+.animate-fade-in-up-delay    { animation: fadeInUp    0.9s ease-out 0.2s both; }
+.animate-slide-in-left-delay-1 { animation: slideInLeft 0.6s ease-out 0.1s both; }
+.animate-slide-in-left-delay-2 { animation: slideInLeft 0.6s ease-out 0.2s both; }
+.animate-slide-in-left-delay-3 { animation: slideInLeft 0.6s ease-out 0.35s both; }
+.animate-slide-in-left-delay-5 { animation: slideInLeft 0.6s ease-out 0.5s both; }
+.animate-slide-in-left-delay-6 { animation: slideInLeft 0.6s ease-out 0.65s both; }
+.animate-slide-in-left-delay-7 { animation: slideInLeft 0.6s ease-out 0.8s both; }
+.animate-slide-in-right       { animation: slideInRight 0.6s ease-out 0.3s both; }
+.animate-rotate-slow          { animation: rotateSlow  18s linear infinite; }
+.animate-float-badge          { animation: floatBadge   4s ease-in-out infinite; }
+.animate-float-badge-delay    { animation: floatBadge   4s ease-in-out 2s infinite; }
+
+/* ===== Gold gradient text ===== */
+.bg-gradient-hero {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dim) 100%);
+}
+
+/* ===== Academic rule line ===== */
+.rule-draw {
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+  animation: ruleDraw 1.2s ease-out 0.5s both;
+  width: 0;
+}
+.rule-draw.animated { animation: ruleDraw 1.2s ease-out both; }
+
+/* ===== Gradient backgrounds for image container ===== */
+.bg-gradient-photo       { background: linear-gradient(135deg, var(--navy-surface), var(--navy-mid)); }
+.bg-gradient-photo-hover { background: linear-gradient(135deg, rgba(200,164,90,0.15), transparent); }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem; }
+}

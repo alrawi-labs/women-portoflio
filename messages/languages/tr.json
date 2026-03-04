@@ -1,0 +1,34 @@
+{
+  "title": "Diller",
+  "subtitle": "Dilleri iyi bilmek, küresel iletişim fırsatlarını açar ve kültürler arası profesyonel iş birliği olanaklarını güçlendirir",
+  "levels": {
+    "native": "Anadil",
+    "professional": "Profesyonel",
+    "intermediate": "Orta Seviye"
+  },
+  "sectionCategory": "Diller",
+
+  "languages": [
+    {
+      "name": "Arapça",
+      "nativeName": "العربية",
+      "level": "native",
+      "flag": "🇮🇶",
+      "backward": "/assets/images/LanguagesFlags/iraq.png"
+    },
+    {
+      "name": "Türkçe",
+      "nativeName": "Türkçe",
+      "level": "professional",
+      "flag": "🇹🇷",
+      "backward": "/assets/images/LanguagesFlags/turkey.png"
+    },
+    {
+      "name": "İngilizce",
+      "nativeName": "English",
+      "level": "intermediate",
+      "flag": "🇺🇸",
+      "backward": "/assets/images/LanguagesFlags/america.png"
+    }
+  ]
+}
