@@ -1,0 +1,104 @@
+{
+  "title": "Yetenekler ve Uzmanlıklar",
+  "subtitle": "Olağanüstü dijital çözümler oluşturmak için üzerinde çalıştığım teknolojiler ve araçlar",
+  "sectionCategory": "Yetkinlikler",
+  "categoryPrefix": "Kategori",
+  "skillsCount": "yetenek",
+  "categories": {
+    "programmingLanguages": "Programlama Dilleri",
+    "frameworks": "Frameworkler & Kütüphaneler",
+    "concepts": "Kavramlar & Teknikler",
+    "databases": "Veritabanları"
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "C#"
+      },
+      {
+        "name": "Java"
+      },
+      {
+        "name": "Python"
+      },
+      {
+        "name": "PHP"
+      },
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "Dart"
+      },
+      {
+        "name": "HTML"
+      },
+      {
+        "name": "CSS"
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "ASP.NET MVC Core"
+      },
+      {
+        "name": "Laravel"
+      },
+      {
+        "name": "Django"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Next.js"
+      },
+      {
+        "name": "Flutter"
+      },
+      {
+        "name": "Bootstrap"
+      },
+      {
+        "name": "Tailwind"
+      }
+    ],
+    "concepts": [
+      {
+        "name": "Nesne Yönelimli Programlama (OOP)"
+      },
+      {
+        "name": "Veri Yapıları"
+      },
+      {
+        "name": "Algoritmalar"
+      },
+      {
+        "name": "Paralel Programlama"
+      },
+      {
+        "name": "Makine Öğrenimi"
+      },
+      {
+        "name": "Derin Öğrenme"
+      },
+      {
+        "name": "Doğal Dil İşleme (NLP)"
+      },
+      {
+        "name": "Metin Madenciliği"
+      },
+      {
+        "name": "Ağ Güvenliği"
+      }
+    ],
+    "databases": [
+      {
+        "name": "MySQL"
+      },
+      {
+        "name": "Microsoft SQL Server"
+      }
+    ]
+  }
+}

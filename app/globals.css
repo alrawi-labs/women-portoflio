@@ -1,0 +1,140 @@
+/* @import "./variables.css"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Elegant Feminine Portfolio – Plum & Rose Gold Palette ===== */
+:root {
+  /* Core palette */
+  --gold:           #dda7a5; /* Rose Gold */
+  --gold-light:     #f0c4c2; /* Light Blush */
+  --gold-dim:       #b3817e; /* Dimmed Rose Gold */
+  --navy:           #1f1a24; /* Deep Plum Black */
+  --navy-mid:       #2c2433; /* Mid Plum */
+  --navy-surface:   #382d42; /* Plum Surface */
+  --navy-border:    #4d3f57; /* Subtle Plum Border */
+  --cream:          #faf3f2; /* Warm Ivory */
+  --cream-dim:      #d1c5c4; /* Dimmed warm grey */
+  --slate:          #947f89; /* Mauve Slate */
+
+  /* Aliases used by Tailwind config / components */
+  --gradient-start: #2c2433;
+  --gradient-end:   #dda7a5;
+  --bg-primary:     #1f1a24;
+  --bg-secondary:   #2c2433;
+  --text-color:     #faf3f2;
+  --text-color2:    #dda7a5;
+  --border-color-subtle: #4d3f57;
+  --border-color:   #dda7a5;
+  --bg-hover:       #382d42;
+  --text-hover:     #f0c4c2;
+}
+
+/* ===== Base ===== */
+body {
+  font-family: 'Sora', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Subtle graph-paper grid background ===== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(221, 167, 165, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(221, 167, 165, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ===== Typography helpers ===== */
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb  {
+  background: linear-gradient(180deg, var(--gold-dim), var(--gold));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+* { scrollbar-width: thin; scrollbar-color: var(--gold) var(--bg-primary); }
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes scaleText {
+  0%, 100% { transform: scale(1);    opacity: 0.06; }
+  50%       { transform: scale(1.04); opacity: 0.10; }
+}
+@keyframes ruleDraw {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.animate-fade-in-up          { animation: fadeInUp    0.7s ease-out both; }
+.animate-fade-in-up-delay    { animation: fadeInUp    0.9s ease-out 0.2s both; }
+.animate-slide-in-left-delay-1 { animation: slideInLeft 0.6s ease-out 0.1s both; }
+.animate-slide-in-left-delay-2 { animation: slideInLeft 0.6s ease-out 0.2s both; }
+.animate-slide-in-left-delay-3 { animation: slideInLeft 0.6s ease-out 0.35s both; }
+.animate-slide-in-left-delay-5 { animation: slideInLeft 0.6s ease-out 0.5s both; }
+.animate-slide-in-left-delay-6 { animation: slideInLeft 0.6s ease-out 0.65s both; }
+.animate-slide-in-left-delay-7 { animation: slideInLeft 0.6s ease-out 0.8s both; }
+.animate-slide-in-right       { animation: slideInRight 0.6s ease-out 0.3s both; }
+.animate-rotate-slow          { animation: rotateSlow  18s linear infinite; }
+.animate-float-badge          { animation: floatBadge   4s ease-in-out infinite; }
+.animate-float-badge-delay    { animation: floatBadge   4s ease-in-out 2s infinite; }
+
+/* ===== Gold gradient text ===== */
+.bg-gradient-hero {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dim) 100%);
+}
+
+/* ===== Academic rule line ===== */
+.rule-draw {
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+  animation: ruleDraw 1.2s ease-out 0.5s both;
+  width: 0;
+}
+.rule-draw.animated { animation: ruleDraw 1.2s ease-out both; }
+
+/* ===== Gradient backgrounds for image container ===== */
+.bg-gradient-photo       { background: linear-gradient(135deg, var(--navy-surface), var(--navy-mid)); }
+.bg-gradient-photo-hover { background: linear-gradient(135deg, rgba(221, 167, 165, 0.15), transparent); }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem; }
+}
